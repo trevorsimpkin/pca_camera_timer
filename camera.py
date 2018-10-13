@@ -34,5 +34,6 @@ class Camera:
         self.camera.start_recording(self.filename)
         self.camera.wait_recording(self.duration)
         self.camera.stop_recording()
+        self.camera.close()
 
 
