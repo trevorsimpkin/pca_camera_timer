@@ -10,7 +10,7 @@ class Camera:
         self.start_time = start_time
         self.duration_hour = duration_hour
         self.duration_min = duration_min
-        self.fileName = self.start_time.strftime("%Y-%m-%d_%H:%M.h264")
+        self.filename = self.start_time.strftime("%Y-%m-%d_%H:%M.h264")
         self.duration = self.duration_hour * 3600
         self.duration += self.duration_min * 60
 
@@ -27,15 +27,12 @@ class Camera:
         while self.start_time.strftime("%Y-%m-%d %H:%M:%S") != datetime.now().strftime("%Y-%m-%d %H:%M:%S"):
             sleep(1)
         print("They are equal")
+        record()
+        print("time has gone by")
 
-
-        print("%d" % self.duration)
+    def record(self):
         self.camera.start_recording(self.filename)
         self.camera.wait_recording(self.duration)
         camera.stop_recording()
-        print("time has gone by")
-
-
-
 
 
