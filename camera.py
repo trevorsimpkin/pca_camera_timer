@@ -27,7 +27,7 @@ class Camera:
         while self.start_time.strftime("%Y-%m-%d %H:%M:%S") != datetime.now().strftime("%Y-%m-%d %H:%M:%S"):
             sleep(1)
         print("They are equal")
-        record()
+        self.record()
         print("time has gone by")
 
     def record(self):
