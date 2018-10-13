@@ -5,7 +5,7 @@ from picamera import PiCamera
 
 class Camera:
     def __init__(self, start_time, duration_hour, duration_min):
-        self.camera = picamera.PiCamera()
+        self.camera = PiCamera()
         self.camera.resolution = (1296, 730)
         self.start_time = start_time
         self.duration_hour = duration_hour
